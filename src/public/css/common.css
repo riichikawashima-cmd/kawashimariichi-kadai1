@@ -1,0 +1,73 @@
+/* ===== 全体ヘッダー ===== */
+.header {
+    background: #fffefe;
+}
+
+.header__inner {
+    position: relative;
+    /* ロゴ中央配置用 */
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    text-align: center;
+    /* ロゴ中央揃え */
+    border-bottom: 1px solid rgba(159, 132, 132, 0.5);
+}
+
+.header__logo {
+    color: #9f8484;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    /* 中央配置 */
+}
+
+.header__logout {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+.header__logout .logout-btn {
+    background-color: #f4f4f4;
+    /* 色変更 */
+    border: 1px solid #82756a;
+    color: #82756a;
+    padding: 6px 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.header__logout .logout-btn:hover {
+    background-color: #82756a;
+    color: #fff;
+}
+
+/* ===== ここから下は common.css の既存スタイルを必要に応じて残す ===== */
+
+/* Login / Register ボタン共通 */
+.header-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 18px;
+    border: 1px solid #82756a;
+    background-color: #f1ece6;
+    color: #82756a;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+/* hover時 */
+.header-btn:hover {
+    background: #82756a;
+    color: #fff;
+}

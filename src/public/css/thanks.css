@@ -1,0 +1,37 @@
+.thanks-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: scale(1.0);
+}
+
+.thanks-message {
+    font-size: 28px;
+    color: #8B7969;
+    margin-bottom: 30px;
+    z-index: 1;
+    font-weight: 600;
+}
+
+/* 背景の大きな Thank you */
+.thanks-wrapper::before {
+    content: "Thank you";
+    position: absolute;
+    font-size: 270px;
+    color: rgba(139, 121, 105, 0.1);
+    z-index: 0;
+}
+
+.thanks-home-btn {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #8B7969;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 1;
+    margin-top: 40px;
+}
