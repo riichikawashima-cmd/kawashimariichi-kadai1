@@ -12,13 +12,8 @@
 <body>
 
     <div class="thanks-wrapper">
-        <p class="thanks-message">
-            お問い合わせありがとうございました
-        </p>
-
-        <a href="{{ url('/') }}" class="thanks-home-btn">
-            HOME
-        </a>
+        <p class="thanks-message">お問い合わせありがとうございました</p>
+        <a href="{{ url('/') }}" class="thanks-home-btn">HOME</a>
     </div>
 
 </body>

@@ -13,7 +13,7 @@ class AuthController extends Controller
     // ユーザー登録フォーム表示
     public function showRegisterForm()
     {
-        return view('auth.register'); // Blade ファイルを表示
+        return view('auth.register');
     }
 
     // ユーザー登録処理
@@ -27,28 +27,28 @@ class AuthController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        Auth::login($user); // 登録後に自動ログイン
+        Auth::login($user);
 
-        return redirect('/admin'); // 管理画面に遷移
+        return redirect('/admin');
     }
 
     // POST /logout 用の既存ログアウト処理
     public function logout(Request $request)
     {
-        Auth::logout();                        // ログアウト
-        $request->session()->invalidate();      // セッション破棄
-        $request->session()->regenerateToken(); // CSRFトークン再生成
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-        return redirect()->route('logout.page');            // ログイン画面へリダイレクト
+        return redirect()->route('logout.page');
     }
 
     // GET /logout 用の新しいログアウトページ表示
     public function showLogoutPage(Request $request)
     {
-        Auth::logout();                        // ログアウト
-        $request->session()->invalidate();      // セッション破棄
-        $request->session()->regenerateToken(); // CSRFトークン再生成
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-        return view('auth.logout');            // ログアウトページ表示
+        return view('auth.logout');
     }
 }

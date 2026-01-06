@@ -13,7 +13,7 @@ class CreateFormsTable extends Migration
             $table->string('name', 50);
             $table->string('email', 100);
             $table->string('tel', 20);
-            $table->text('content');  // お問い合わせ内容は長くなる可能性があるので text
+            $table->text('content');
             $table->timestamps();
         });
     }

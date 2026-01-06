@@ -8,7 +8,6 @@ class RegisterRequest extends FormRequest
 {
     public function authorize()
     {
-        // 誰でもアクセス可能にする
         return true;
     }
 
@@ -17,7 +16,7 @@ class RegisterRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:8', // パスワードは8文字以上
+            'password' => 'required|string|min:8',
         ];
     }
 

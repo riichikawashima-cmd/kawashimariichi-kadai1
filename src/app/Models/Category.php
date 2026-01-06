@@ -9,6 +9,5 @@ class Category extends Model
 {
     use HasFactory;
 
-    // ここを追加
     protected $fillable = ['content'];
 }

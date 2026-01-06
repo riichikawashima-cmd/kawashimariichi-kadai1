@@ -17,7 +17,6 @@
                 <div class="error">{{ $message }}</div>
                 @enderror
             </div>
-
             <div class="form-group">
                 <label for="password">パスワード</label>
                 <input type="password" id="password" name="password" placeholder="password123">
@@ -25,7 +24,6 @@
                 <div class="error">{{ $message }}</div>
                 @enderror
             </div>
-
             <button type="submit" class="login-btn">ログイン</button>
         </form>
     </div>

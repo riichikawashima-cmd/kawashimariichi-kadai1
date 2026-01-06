@@ -1,7 +1,6 @@
 /* ページ全体背景 */
 .login-page {
     background-color: #f1ece6;
-    /* Register と同じ色 */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,7 +11,6 @@
 /* Loginタイトル */
 .login-title {
     color: #9f8484;
-    /* Register と同じ色 */
     font-size: 2rem;
     margin-bottom: 40px;
     font-weight: 400;
@@ -22,17 +20,13 @@
 .login-box {
     background-color: white;
     width: 640px;
-    /* Register と同じ横幅 */
     min-height: 480px;
-    /* 高さを確保 */
     padding: 60px 40px;
-    /* 上下左右の余白 */
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* 中央揃え */
 }
 
 /* フォーム内 */
@@ -40,13 +34,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* 入力欄・ボタンの間隔均等 */
     height: 280px;
-    /* フォーム内全体の高さを固定 */
     width: 400px;
-    /* 入力欄の横幅を固定 */
     margin: 0 auto;
-    /* 中央配置 */
 }
 
 /* フォームグループ */
@@ -59,11 +49,8 @@
 /* ラベル */
 label {
     font-weight: 500;
-    /* 少し細め */
     font-size: 1rem;
-    /* 少し大きめ */
     color: #9f8484;
-    /* Register と同じ色 */
     margin-bottom: 0.3rem;
 }
 
@@ -72,7 +59,6 @@ input {
     width: 100%;
     padding: 0.5rem;
     background-color: #f1ece6;
-    /* Register と同じ色 */
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -87,10 +73,8 @@ input {
 /* ログインボタン */
 .login-btn {
     width: auto;
-    /* 文字幅に合わせる */
     padding: 0.5rem 20px;
     background-color: #8b5e3c;
-    /* Register と同じ色 */
     color: white;
     border: none;
     border-radius: 4px;
@@ -98,7 +82,6 @@ input {
     font-size: 1rem;
     display: block;
     margin: 0 auto;
-    /* 中央配置 */
 }
 
 .login-btn:hover {

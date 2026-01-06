@@ -9,7 +9,6 @@
     <h1 class="register-title">Register</h1>
     <div class="register-box">
         {{-- バリデーションエラー --}}
-
         <form action="{{ url('/register') }}" method="POST">
             @csrf
             <div class="form-group">
@@ -19,7 +18,6 @@
                 <div class="error">{{ $message }}</div>
                 @enderror
             </div>
-
             <div class="form-group">
                 <label for="email">メールアドレス</label>
                 <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="test@example.com">
@@ -27,7 +25,6 @@
                 <div class="error">{{ $message }}</div>
                 @enderror
             </div>
-
             <div class="form-group">
                 <label for="password">パスワード</label>
                 <input type="password" id="password" name="password" placeholder="coachtechno6">
@@ -35,7 +32,6 @@
                 <div class="error">{{ $message }}</div>
                 @enderror
             </div>
-
             <button type="submit" class="register-btn">登録</button>
         </form>
     </div>

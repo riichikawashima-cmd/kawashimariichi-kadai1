@@ -20,7 +20,6 @@
     font-weight: bold;
     font-size: 24px;
     display: inline-block;
-    /* 中央配置 */
 }
 
 .header__logout {
@@ -33,7 +32,6 @@
 
 .header__logout .logout-btn {
     background-color: #f4f4f4;
-    /* 色変更 */
     border: 1px solid #82756a;
     color: #82756a;
     padding: 6px 16px;
@@ -48,7 +46,6 @@
     color: #fff;
 }
 
-/* ===== ここから下は common.css の既存スタイルを必要に応じて残す ===== */
 
 /* Login / Register ボタン共通 */
 .header-btn {

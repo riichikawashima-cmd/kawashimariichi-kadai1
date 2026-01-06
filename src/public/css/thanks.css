@@ -16,7 +16,6 @@
     font-weight: 600;
 }
 
-/* 背景の大きな Thank you */
 .thanks-wrapper::before {
     content: "Thank you";
     position: absolute;

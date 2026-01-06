@@ -11,14 +11,12 @@
     {{-- 検索フォーム --}}
     <form class="search-form" method="GET" action="{{ url('/search') }}">
         <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ request('keyword') }}">
-
         <select name="gender">
             <option value="">性別</option>
             <option value="1" {{ request('gender') == 1 ? 'selected' : '' }}>男性</option>
             <option value="2" {{ request('gender') == 2 ? 'selected' : '' }}>女性</option>
             <option value="3" {{ request('gender') == 3 ? 'selected' : '' }}>その他</option>
         </select>
-
         <select name="category_id" class="select-category">
             <option value="">お問い合わせの種類</option>
             <option value="1" {{ request('category_id') == 1 ? 'selected' : '' }}>商品のお届けについて</option>
@@ -27,9 +25,7 @@
             <option value="4" {{ request('category_id') == 4 ? 'selected' : '' }}>ショップへのお問い合わせ</option>
             <option value="5" {{ request('category_id') == 5 ? 'selected' : '' }}>その他</option>
         </select>
-
         <input type="date" name="date" value="{{ request('date') }}">
-
         <button type="submit">検索</button>
         <a href="{{ url('/reset') }}" class="reset-btn">リセット</a>
     </form>
@@ -91,7 +87,6 @@
                         詳細
                     </button>
                 </td>
-
             </tr>
             @endforeach
         </tbody>
@@ -124,13 +119,9 @@
         const closeBtn = modal.querySelector('.modal-close');
         const deleteForm = document.getElementById('delete-form');
         const exportBtn = document.getElementById('export-btn');
-
-        // 詳細ボタン
         document.querySelectorAll('.detail-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const d = btn.dataset;
-
-                // ★ここがポイント：2列(grid)のHTMLを作る
                 modalContent.innerHTML = `
                 <div class="modal-grid">
                     <div class="modal-label">お名前</div><div class="modal-value">${d.last_name} ${d.first_name}</div>
@@ -144,23 +135,17 @@
                     <div class="modal-value">${(d.detail ?? '').replace(/\n/g,'<br>')}</div>
                 </div>
             `;
-
                 deleteForm.action = `/delete/${d.id}`;
-
                 modal.classList.add('active');
                 overlay.classList.add('active');
             });
         });
-
         const close = () => {
             modal.classList.remove('active');
             overlay.classList.remove('active');
         };
-
         closeBtn.addEventListener('click', close);
         overlay.addEventListener('click', close);
-
-        // 削除
         deleteForm.addEventListener('submit', function(e) {
             e.preventDefault();
             fetch(this.action, {
@@ -174,8 +159,6 @@
                 else alert('削除に失敗しました');
             }).catch(() => alert('削除に失敗しました'));
         });
-
-        // エクスポート（検索条件付き）
         if (exportBtn) {
             exportBtn.addEventListener('click', function() {
                 const params = new URLSearchParams(window.location.search);
