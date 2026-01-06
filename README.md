@@ -10,6 +10,8 @@
    docker-compose up -d --build
 
 ### Laravel環境構築
+※ Laravelプロジェクトは `src` ディレクトリ配下にあります。以降のコマンドは `src` 配下で実行してください。
+
 1. PHPコンテナに入る
    docker-compose exec php bash
 
